@@ -1,25 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState } from 'react';
+import data from './data';
+import List from './List';
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  // Array of objects are stored in data.js file -- using hooks we retrive the data from the other file to use it here
+  const [people, setPeople] = useState(data);
+
+  return <main>
+    <section className='container'>
+      <h3>0 birthday</h3>
+      {/* Setting up the static data - list component */}
+      <List />
+      <button onClick={() => console.log('You have clicked me :) ')}>Clear All</button>
+    </section>
+  </main>;
 }
 
 export default App;

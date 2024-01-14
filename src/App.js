@@ -6,13 +6,20 @@ function App() {
   const [people, setPeople] = useState(data);
 
   return <main>
+     
     <section className='container'>
-      <h3>0 birthday</h3>
+    <h2>Welcome to the birthday Reminder App</h2>
+      <h3>Today there are {people.length} birthdays and here is the list:</h3>
       {/* Setting up the static data - list component */}
-      <List />
-      <button onClick={() => console.log('You have clicked me :) ')}>Clear All</button>
+      <List people={people} />
+      <button onClick={() => setPeople([])}>Clear All</button>
+      <button onClick={() => window.location.reload(false)}>Click here reload the page</button>
     </section>
+
   </main>;
 }
 
 export default App;
+
+// REF: https://upmostly.com/tutorials/how-to-refresh-a-page-or-component-in-react#:~:text=What%20is%20this%3F&text=import%20React%20from%20'react'%3B,refreshPage%7D%3EClick%20to%20reload! 
+// REL: https://www.freecodecamp.org/news/toggle-elements-in-react-using-hooks/

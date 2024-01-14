@@ -34,7 +34,7 @@ This project is a part of the Code 15 React Projects - Complete Course from free
  
 ## Technologies
 
-- React
+- ReactJS
 - useState Hooks
 - HTML5
 - CSS3

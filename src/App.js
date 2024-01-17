@@ -13,7 +13,7 @@ function App() {
       {/* Setting up the static data - list component */}
       <List people={people} />
       <button onClick={() => setPeople([])}>Clear All</button>
-      <button onClick={() => window.location.reload(false)}>Click here reload the page</button>
+      <button onClick={() => window.location.reload(false)}>Reset Page</button>
     </section>
 
   </main>;
